@@ -70,44 +70,18 @@ cd backend && npm install
 cd ../frontend && npm install
 ```
 
-3. **Environment Configuration**
-
-Backend (.env):
-```env
-NODE_ENV=development
-DB_URI=mongodb://localhost:27017/globalconnect
-JWT_SECRET=your_jwt_secret_min_32_characters
-JWT_EXPIRE=7d
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-GOOGLE_CALLBACK_URL=http://localhost:5000/api/auth/google/callback
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-BREVO_API_KEY=your_brevo_api_key
-BREVO_SENDER_EMAIL=noreply@globalconnect.com
-BREVO_SENDER_NAME=GlobalConnect
-FRONTEND_URL=http://localhost:5173
-PORT=5000
-```
-
-Frontend (.env):
-```env
-VITE_API_URL=http://localhost:5000
-```
-
-4. **Start MongoDB**
+3. **Start MongoDB**
 ```bash
 mongod
 ```
 
-5. **Seed Database (Optional)**
+4. **Seed Database (Optional)**
 ```bash
 cd backend
 npm run seed
 ```
 
-6. **Run Development Servers**
+5. **Run Development Servers**
 
 Terminal 1 (Backend):
 ```bash
@@ -246,35 +220,6 @@ GlobalConnect/
 └── README.md
 ```
 
-## Deployment
-
-### Frontend (Vercel)
-1. Connect GitHub repository to Vercel
-2. Set environment variables in Vercel dashboard
-3. Deploy automatically on push to main
-
-### Backend (Render/DigitalOcean)
-1. Create new web service
-2. Connect GitHub repository
-3. Set environment variables
-4. Configure build command: `npm install`
-5. Configure start command: `npm start`
-
-### Database (MongoDB Atlas)
-1. Create cluster on MongoDB Atlas
-2. Whitelist IP addresses
-3. Get connection string
-4. Update `DB_URI` in environment variables
-
-## Default Credentials (Seed Data)
-
-Admin Account:
-- Email: john@example.com
-- Password: password123
-
-Regular Users:
-- Email: jane@example.com / Password: password123
-- Email: mike@example.com / Password: password123
 
 ## AI-Ready Features
 
